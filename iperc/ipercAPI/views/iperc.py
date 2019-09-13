@@ -43,7 +43,7 @@ class IpercByArea(generics.ListAPIView):
 
 	def get_queryset(self):
 		area = self.kwargs['area']
-		area = Area.objects.get(pk = area).first()
+		area = Area.objects.get(pk = area)
 
 		iperc = Iperc.objects.filter(area = area)
 		return iperc

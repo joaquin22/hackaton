@@ -29,6 +29,7 @@ class Usuario(User):
 	codigo = models.CharField(max_length=30, blank=False, null=False)
 	cargo = models.CharField(max_length=30, blank=False, null=False)
 	rol = models.IntegerField(null=True, default=0, choices=ROLES)
+	celular = models.CharField(blank=True, null=True,max_length=10)
 	area = models.ForeignKey(Area, on_delete=models.CASCADE, related_name='usuario_area')
 
 class Iperc(models.Model):

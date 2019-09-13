@@ -19,8 +19,8 @@ urlpatterns = [
 	url(r'^peligro/$', views.PeligroList.as_view()),
 	url(r'^riesgo/$', views.RiesgoList.as_view()),
 	url(r'^iperc/$', views.IpercList.as_view()),
-	url(r'^iperc/(?P<pk>[0-9]+)/', views.IpercList.as_view()),
-	url(r'^iperc/area/(?P<pk>[0-9]+)/', views.IpercList.as_view()),
+	url(r'^iperc/(?P<pk>[0-9]+)/', views.IpercByUser.as_view()),
+	url(r'^iperc/area/(?P<area>[0-9]+)/', views.IpercByArea.as_view()),
 	url(r'^iperc/fecha/(?P<start>[0-9]{4}-?[0-9]{2}-?[0-9]{2})/(?P<end>[0-9]{4}-?[0-9]{2}-?[0-9]{2})/$', views.IpercByDate.as_view()),
 ]
 

@@ -49,5 +49,4 @@ class UsuarioByToken(views.APIView):
 											"last_name": request.user.last_name,
 											"email": request.user.email,
 											"codigo" : user.codigo,
-											"cargo":user.cargo,
-											"area":user.area})
+											"cargo":user.cargo})
